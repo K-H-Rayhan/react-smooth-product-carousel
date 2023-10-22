@@ -1,0 +1,1 @@
+export { Productcarousel as default } from './ProductCarousel/Carousel'
