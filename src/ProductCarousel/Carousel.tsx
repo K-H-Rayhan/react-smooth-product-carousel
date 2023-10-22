@@ -61,7 +61,7 @@ export function Productcarousel({ children, title = "Product" }: {
             onClick={prevSlide}
             className={`${"carouselButton"} ${leftDisable ? "disabled" : ''}`}
           >
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M15.525 18.966L8.558 12l6.967-6.967"></path></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" strokeWidth="1.5" d="M15.525 18.966L8.558 12l6.967-6.967"></path></svg>
           </button>
           <button
             aria-label="Next Slide"
@@ -69,7 +69,7 @@ export function Productcarousel({ children, title = "Product" }: {
             onClick={nextSlide}
             className={`${"carouselButton"} ${rightDisable ? "disabled" : ''}`}
           >
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M8.474 18.966L15.44 12 8.474 5.033"></path></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" strokeWidth="1.5" d="M8.474 18.966L15.44 12 8.474 5.033"></path></svg>
           </button>
         </div>
       </div>
@@ -85,9 +85,6 @@ export function Productcarousel({ children, title = "Product" }: {
             {...(index === 0 ? { ref: ref } : {})}
             key={index}
             className={"productItem"}
-            style={{
-              marginRight: index !== elements.length - 1 ? "12px" : "",
-            }}
           >
             {item}
           </div>
