@@ -1,6 +1,6 @@
 {
   "name": "react-smooth-product-carousel",
-  "version": "0.0.17",
+  "version": "0.0.20",
   "description": "Lightweight, responsive, and smooth product carousel for React that works well on mobile devices.",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
@@ -21,7 +21,8 @@
     "rollup-plugin-dts": "^6.0.1",
     "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
   },
   "peerDependencies": {
     "react": "^18.2.0"
