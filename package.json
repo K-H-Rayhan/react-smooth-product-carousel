@@ -1,6 +1,6 @@
 {
   "name": "react-smooth-product-carousel",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Lightweight, responsive, and smooth product carousel for React that works well on mobile devices.",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
