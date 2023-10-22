@@ -1,11 +1,11 @@
-import React, { useDeferredValue, useRef } from "react";
+import React, { useRef } from "react";
 import './Carousel.css';
 
 export function Productcarousel({ children, title = "Product" }: {
   children: React.ReactNode,
   title: string,
 }) {
-  const defferedProducts = useDeferredValue(React.Children.map(children, (child) => child));
+  const elements = React.Children.map(children, (child) => child) || [];
   const [leftDisable, setLeftDisable] = React.useState(true);
   const [rightDisable, setRightDisable] = React.useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -80,13 +80,13 @@ export function Productcarousel({ children, title = "Product" }: {
         ref={containerRef}
         tabIndex={0} // Make the container focusable
       >
-        {defferedProducts?.map((item: any, index: number) => (
+        {elements?.map((item: any, index: number) => (
           <div
             {...(index === 0 ? { ref: ref } : {})}
             key={index}
             className={"productItem"}
             style={{
-              marginRight: index !== defferedProducts.length - 1 ? "12px" : "",
+              marginRight: index !== elements.length - 1 ? "12px" : "",
             }}
           >
             {item}
